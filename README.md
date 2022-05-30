@@ -2,7 +2,7 @@
 
 That's my implementation of class aware confusion matrix for object detection and instance segmentations. Particulary it uses COCO format of datasets for targets and predictions. But it easily can be rewrited to another format type. Also it uses pytorch for typings, but again easily can be replaces with tensorflow for example.
 
-### Uses
+### Using
 
 ```python
 >>> from confusion_matrix import ConfusionMatrix
@@ -11,7 +11,7 @@ That's my implementation of class aware confusion matrix for object detection an
 ...                                            thrs_config={0: 0.5, 1: 0.5})
 >>> for images, targets in test_dataloader:
 >>>     outputs = model(images)
->>>     confusion_matrix.update(targets, outputs)
+>>>     confusion_matrix.update(outputs, targets)
 
 >>> confusion_matrix.plot(show=True)
 
